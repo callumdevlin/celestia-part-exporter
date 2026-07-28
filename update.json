@@ -1,0 +1,10 @@
+{
+  "latest_version": "v1.14",
+  "notice": {
+    "id": "2026-06-19-vault-migration",
+    "severity": "info",
+    "title": "Heads up",
+    "message": "New Update is Available.",
+    "block": false
+  }
+}
