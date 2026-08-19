@@ -1,5 +1,5 @@
 {
-  "latest_version": "v1.15",
+  "latest_version": "v1.14",
   "message": "A new version is available. Please download the latest version from 'Engineering/Software/Processing Software/Celestia Part Exporter'",
   "severity": "info",
   "//": "severity options: info, warning, critical"
