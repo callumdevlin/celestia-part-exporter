@@ -2,45 +2,6 @@
 
 A record of every version of the Celestia Part Exporter, newest first. Each released version lists **New Features** and **Bug Fixes**.
 
-## How this file works
-
-- **Released versions** are listed below the Planned section, newest first.
-- **The Planned section at the top is the working list for the next version.** Add what you want changed as you think of it. Tick items off once they ship.
-- **When building a new version (for Claude):** read the Planned section first. Ask about anything unclear or listed under *Open questions*, build every item, then move the entries into a new released section and clear Planned.
-
-**Release checklist**
-
-1. Move the Planned entries into a new released section and start a fresh Planned section.
-2. Bump `APP_VERSION` in the script.
-3. Update `latest_version` (and `message`) in `update.json` so users get the update popup.
-4. Rebuild the EXE and share it.
-
----
-
-## Planned: v1.16 (not yet released)
-
-> Working list for the next version. Edit freely.
-
-### New Features
-
-- [ ] **Multi-folder selection.** Scan more than one source folder and pool the files into the single "Files to Process" list.
-  - *Design TBC.* Suggested approach: make each scan additive (it adds to the list instead of replacing it), add a **Clear list** button, and show the source folder on each row so identical part numbers from different folders can be told apart.
-
-- [ ] **Smarter revision defaults for parts and drawings.** Check the revision per file type (part/assembly STEP vs drawing PDF) instead of one highest revision across the whole folder:
-  - Exporting **only the drawing** when the part is already in the folder: default to the **part's current revision** (the same revision, not one above).
-  - Exporting the **part and drawing together**: default to the **next revision** for both.
-  - A part and its drawing in the same export **must always share the same revision**. They cannot be exported at different versions.
-
-### Bug Fixes
-
-- [ ] *(Suggested, please confirm)* **Keep part and drawing paired when resolving a revision clash.** At the moment "Bump to next rev" is applied per file, so it can push the part and drawing onto different revisions. Bumping should move the pair together.
-
-### Open questions
-
-- If only the **part** is being exported and the **drawing** already exists, should the part default to the drawing's revision (the mirror of the rule above)?
-- If the part and drawing are **already at different revisions** in the folder and only one is exported, which one should it follow?
-- Does the same pairing apply to **assembly + drawing** (SLDASM treated like a part)?
-
 ---
 
 ## v1.15
